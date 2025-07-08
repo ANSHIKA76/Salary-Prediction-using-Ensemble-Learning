@@ -1,5 +1,3 @@
-# Salary-Prediction-using-Ensemble-Learning
-
 <h1 style="color:#2E86C1">💼 Salary Prediction using Ensemble Learning</h1>
 
 This project demonstrates a machine learning pipeline to <strong>predict salaries</strong> based on various features using <strong>Ensemble Learning</strong> techniques. Built using <strong>Python</strong> and <strong>Jupyter Notebook</strong>, it showcases the power of combining multiple models to improve predictive performance over individual models.
