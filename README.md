@@ -1,38 +1,61 @@
-<h1 style="color:#2E86C1">💼 Salary Prediction using Ensemble Learning</h1>
+# 💼 Salary Prediction Project
 
-This project demonstrates a machine learning pipeline to <strong>predict salaries</strong> based on various features using <strong>Ensemble Learning</strong> techniques. Built using <strong>Python</strong> and <strong>Jupyter Notebook</strong>, it showcases the power of combining multiple models to improve predictive performance over individual models.
+This project focuses on predicting employee salaries using machine learning techniques based on a variety of features such as education level, years of experience, job title, industry, location, and more. It aims to assist organizations in making informed salary decisions and understanding compensation patterns within their workforce.
 
-<h2 style="color:#28B463">📌 Project Overview</h2>
+---
 
-The goal of this project is to accurately predict the salary of individuals using input features such as education, job title, experience level, employment type, and location. Ensemble methods like <strong>Random Forest</strong>, <strong>Gradient Boosting</strong>, and <strong>Voting Regressor</strong> are applied to achieve high prediction accuracy.
+## 🔍 Project Overview
 
-<h2 style="color:#F39C12">⚙️ Technologies Used</h2>
+Accurately predicting salaries helps companies optimize compensation strategies and ensures competitiveness in the job market. By leveraging historical salary data and employee attributes, this project builds a model that can estimate expected salaries for new or existing employees.
 
-- <strong>Python</strong>
-- <strong>Jupyter Notebook</strong>
-- <strong>Pandas</strong> for data manipulation
-- <strong>NumPy</strong> for numerical operations
-- <strong>Matplotlib & Seaborn</strong> for visualization
-- <strong>Scikit-learn</strong> for machine learning models and evaluation
-- <strong>Ensemble Methods</strong>: Random Forest, Gradient Boosting, Voting Regressor
+---
 
-<h2 style="color:#AF7AC5">📊 Workflow</h2>
+## 🛠 Features Used
 
-1. <strong>Data Preprocessing</strong>
-2. <strong>Exploratory Data Analysis (EDA)</strong>
-3. <strong>Model Building</strong>
-4. <strong>Model Evaluation</strong>
-5. <strong>Final Prediction</strong>
+- **Education Level:** Highest qualification attained by the employee.
+- **Years of Experience:** Total work experience in years.
+- **Job Title:** Designation or role of the employee.
+- **Industry:** The sector in which the employee works.
+- **Location:** Geographic location of the job.
+- **Company Size:** Size of the company (small, medium, large).
+- **Certifications:** Relevant professional certifications.
+- **Age:** Employee’s age.
+- **Working Hours:** Number of hours worked weekly.
+- **Crucial Code:** A domain-specific code affecting salary (could be skill or department code).
 
-<h2 style="color:#45B39D">📁 Files Included</h2>
+---
 
-- <code>salary_prediction_ensemble.ipynb</code>
-- <code>data/</code>
-- <code>requirements.txt</code>
-- <code>README.md</code>
+## 📊 Data Preprocessing
 
-<h2 style="color:#DC7633">🚀 How to Run</h2>
+- Removed rows with missing salary values from training data to ensure quality.
+- Handled missing values in features:
+  - Filled numerical missing values with column means.
+  - Filled categorical missing values with the most frequent category (mode).
+- Encoded categorical variables using one-hot encoding to convert them into a machine-readable format.
+- Scaled all feature values using StandardScaler to normalize data distribution, which improves model performance.
 
-1. Clone the repository:
+---
+
+## ⚙️ Model Building
+
+- **Algorithm:** Random Forest Regressor
+- **Parameters:** 50 decision trees (`n_estimators=50`), fixed `random_state` for reproducibility.
+- **Training:** Data split into 80% training and 20% validation.
+- **Evaluation Metric:** Root Mean Squared Error (RMSE) calculated on validation data to quantify prediction accuracy.
+
+---
+
+## 📈 Model Performance
+
+- The model achieved an RMSE of approximately `₹<your_rmse_value>` on the validation set.
+- Feature importance analysis revealed which factors most influenced salary predictions, enabling interpretability.
+
+---
+
+## 🧑‍💻 How to Run the Project
+
+1. Clone the repository or download the source files.
+2. Ensure you have the required Python libraries installed:
+
    ```bash
-   git clone https://github.com/yourusername/salary-prediction-ensemble.git
+   pip install pandas numpy matplotlib seaborn scikit-learn
