@@ -10,7 +10,7 @@ st.title("💼 Salary Prediction App")
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv("salary_train.csv")
+    df = pd.read_csv("../data/salary_train.csv")  
     df = df.dropna(subset=["salary"])
     return df
 
